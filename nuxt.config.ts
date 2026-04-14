@@ -17,13 +17,17 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      link: [
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap",
-        },
-      ],
       title: "Code Editor",
     },
   },
+  googleFonts: {
+    display: "swap",
+    families: {
+      "Open Sans": {
+        wght: "300..800",
+        ital: "300..800",
+      },
+    },
+  },
+  modules: ["@nuxtjs/google-fonts"],
 });
