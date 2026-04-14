@@ -29,5 +29,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  icon: {
+    mode: 'svg',
+    aliases: {
+      code: 'heroicons:code-bracket-square-solid',
+    },
+  },
   modules: ['@nuxtjs/google-fonts', '@nuxt/icon'],
 })
