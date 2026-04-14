@@ -1,7 +1,7 @@
 <template>
-  <div class="dark:bg-gray-800">
+  <div class="flex flex-col min-h-screen dark dark:bg-gray-800">
     <header
-      class="py-1.5 sm:py-4 fixed top-0 inset-x-0 sm:static z-10 bg-white border-b sm:border-0 dark:border-0 dark:bg-gray-900"
+      class="py-1.5 sm:py-4 fixed top-0 inset-x-0 sm:static z-10 bg-white border-b border-gray-200 sm:border-0 dark:border-0 dark:bg-gray-900"
     >
       <div class="container flex items-center justify-between gap-x-10">
         <a href="#" class="flex items-center gap-x-1 sm:gap-x-2">
@@ -51,7 +51,7 @@
         <div class="flex sm:hidden">
           <nav
             id="nav"
-            class="absolute inset-x-0 bg-white border-b top-full hidden target:block peer dark:border-0 dark:bg-gray-900"
+            class="absolute inset-x-0 bg-white border-b border-gray-200 top-full hidden target:block peer dark:border-0 dark:bg-gray-900"
           >
             <ul class="flex flex-col items-center gap-y-2 px-3 pb-3">
               <li class="w-full">
@@ -283,10 +283,10 @@
             <input
               type="email"
               placeholder="Your Email"
-              class="rounded-md border border-gray-300 px-4 py-2 text-sm shadow-sm focus:border-indigo-600 focus:ring-1 w-96 sm:rounded-lg sm:text-base dark:focus:ring-indigo-400 dark:bg-gray-700 dark:border-0 dark:text-white dark:placeholder:text-gray-400"
+              class="rounded-md border border-gray-300 px-4 py-2 text-sm shadow-xs outline-hidden ring-transparent focus:border-indigo-600 focus:ring-1 w-96 sm:rounded-lg sm:text-base dark:focus:ring-indigo-400 dark:bg-gray-700 dark:border-0 dark:text-white dark:placeholder:text-gray-400"
             />
             <button
-              class="px-4 py-1 font-semibold rounded-md bg-indigo-600 text-indigo-50 hover:bg-indigo-700 sm:px-6 sm:py-2 sm:rounded-lg"
+              class="px-4 py-1 font-semibold rounded-md bg-indigo-600 text-indigo-50 cursor-pointer hover:bg-indigo-700 sm:px-6 sm:py-2 sm:rounded-lg"
             >
               <span class="hidden sm:inline">Subscribe</span>
               <svg
@@ -304,7 +304,9 @@
         </div>
       </section>
     </main>
-    <footer class="py-6 bg-indigo-900 sm:pt-10 sm:pb-8 dark:bg-gray-900">
+    <footer
+      class="mt-auto py-6 bg-indigo-900 sm:pt-10 sm:pb-8 dark:bg-gray-900"
+    >
       <div class="container flex flex-col gap-y-6 sm:gap-y-8">
         <div class="flex flex-col gap-10 lg:gap-8 lg:flex-row">
           <div class="flex flex-col items-start mr-auto lg:max-w-80">
