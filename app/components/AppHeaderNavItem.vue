@@ -1,13 +1,7 @@
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    linkClasses?: string
-  }>(),
-  {
-    linkClasses:
-      'font-semibold hover:text-indigo-600 dark:text-gray-200 dark:hover:text-indigo-200',
-  },
-)
+const {
+  linkClasses = 'font-semibold hover:text-indigo-600 dark:text-gray-200 dark:hover:text-indigo-200',
+} = defineProps<{ linkClasses?: string }>()
 </script>
 
 <template>
