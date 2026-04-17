@@ -6,14 +6,14 @@ export default defineNuxtConfig({
   css: ['./app/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
-    server: {
-      hmr: {
-        protocol: 'ws',
-        host: 'localhost',
-        port: 24678,
-      },
-      watch: { usePolling: true },
-    },
+    // server: {
+    //   hmr: {
+    //     protocol: 'ws',
+    //     host: 'localhost',
+    //     port: 24678,
+    //   },
+    //   watch: { usePolling: true },
+    // },
   },
   app: {
     head: {
