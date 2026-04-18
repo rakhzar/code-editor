@@ -1,4 +1,4 @@
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from '@tailwindcss/vite';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -39,7 +39,9 @@ export default defineNuxtConfig({
       plane: 'heroicons:paper-airplane-solid',
       bars: 'heroicons:bars-3-solid',
       xMark: 'heroicons:x-mark-solid',
+      globe: 'heroicons:globe-alt-solid',
+      bracket: 'heroicons:code-bracket-solid',
     },
   },
   modules: ['@nuxtjs/google-fonts', '@nuxt/icon'],
-})
+});
