@@ -1,10 +1,12 @@
 <script setup lang="ts">
-defineProps<{ label: string; type: string; id: string }>();
+defineProps<{ type: string; id: string }>();
 </script>
 
 <template>
   <div class="flex flex-col gap-y-1">
-    <AppLabel :for="id">{{ label }}</AppLabel>
+    <AppLabel :for="id">
+      <slot />
+    </AppLabel>
     <AppInput
       :type="type"
       :id="id"
