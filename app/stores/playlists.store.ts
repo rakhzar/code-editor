@@ -4,59 +4,83 @@ export const usePlaylistsStore = defineStore('playlists', () => {
   const playlists = ref<Playlist[]>([
     {
       id: 1,
-      title: 'Prettier',
+      title: 'Settings',
       description:
-        'Automatically format your code to ensure consistent style across your project.',
+        'Master VS Code settings to create your perfect coding environment.',
       tagIds: [14, 1, 3],
+      lessonIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     },
     {
       id: 2,
-      title: 'GitLens',
+      title: 'Keyboard Shortcuts',
       description:
-        'Supercharge Git within VS Code with commit visualization and blame annotations.',
+        'Boost your productivity with essential VS Code shortcuts and keybindings.',
       tagIds: [15, 13, 3],
+      lessonIds: [12, 13, 14, 15],
     },
     {
       id: 3,
-      title: 'Live Share',
+      title: 'Extensions',
       description:
-        'Real-time collaborative development from the comfort of your favorite editor.',
+        'Discover must-have VS Code extensions for modern development.',
       tagIds: [16, 3, 1],
+      lessonIds: [17, 18, 19, 20, 21, 22, 23],
     },
     {
       id: 4,
-      title: 'ESLint',
+      title: 'Git Mastery',
       description:
-        'Find and fix problems in your JavaScript/TypeScript code automatically.',
+        'Learn advanced Git operations and collaboration directly in VS Code.',
       tagIds: [5, 6, 4],
+      lessonIds: [54],
     },
     {
       id: 5,
-      title: 'Code Runner',
+      title: 'Debugging Techniques',
       description:
-        'Run code snippets in multiple programming languages with a single click.',
+        'Master debugging tools and techniques in VS Code for various languages.',
       tagIds: [7, 3, 1],
+      lessonIds: [55],
     },
     {
       id: 6,
-      title: 'REST Client',
+      title: 'Web Development',
       description:
-        'Send HTTP requests and view responses directly in Visual Studio Code.',
+        'Set up the ultimate web development environment in VS Code.',
       tagIds: [9, 3, 1],
+      lessonIds: [56],
     },
     {
       id: 7,
-      title: 'Code Spell Checker',
+      title: 'Python Development',
       description:
-        'Catch common spelling errors in your source code and documentation.',
+        'Configure VS Code for professional Python development.',
       tagIds: [10, 3, 1],
+      lessonIds: [57],
     },
     {
       id: 8,
-      title: 'Docker',
+      title: 'React Development',
       description:
-        'Manage Docker containers and images directly from VS Code.',
+        'Optimize VS Code for React and modern JavaScript development.',
       tagIds: [11, 9, 3],
+      lessonIds: [58],
+    },
+    {
+      id: 9,
+      title: 'Remote Development',
+      description:
+        'Learn to use VS Code for remote development and cloud environments.',
+      tagIds: [12, 3, 4],
+      lessonIds: [59],
+    },
+    {
+      id: 10,
+      title: 'Testing Tools',
+      description:
+        'Set up and use testing frameworks and tools in VS Code.',
+      tagIds: [8, 3, 1],
+      lessonIds: [60],
     },
   ]);
 
