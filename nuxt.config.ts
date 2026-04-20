@@ -43,5 +43,5 @@ export default defineNuxtConfig({
       bracket: 'heroicons:code-bracket-solid',
     },
   },
-  modules: ['@nuxtjs/google-fonts', '@nuxt/icon'],
+  modules: ['@nuxtjs/google-fonts', '@nuxt/icon', '@pinia/nuxt'],
 });
