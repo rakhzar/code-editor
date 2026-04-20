@@ -8,7 +8,7 @@ const { tags } = useTagsStore();
       v-for="tag in tags"
       :key="tag.id"
     >
-      {{ tag }}
+      {{ tag.name }}
     </TagListItem>
   </ul>
 </template>
