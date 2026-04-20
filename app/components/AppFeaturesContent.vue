@@ -5,20 +5,23 @@ const features = [
     title: 'Settings',
     description:
       'Personalize your workspace to match your unique coding style and preferences effortlessly.',
+    link: '/playlists/prettier/lessons/getting-started-with-prettier',
   },
   {
     icon: 'fire',
     title: 'Keyboard Shortcuts',
     description:
       'Streamline your workflow with essential shortcuts that save you time and boost efficiency.',
+    link: '/playlists/prettier/lessons/getting-started-with-prettier',
   },
   {
     icon: 'puzzle',
     title: 'Extensions',
     description:
       'Expand your capabilities with powerful extensions tailored to enhance your coding experience.',
+    link: '/playlists/prettier/lessons/getting-started-with-prettier',
   },
-]
+];
 </script>
 
 <template>
