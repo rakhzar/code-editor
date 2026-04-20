@@ -1,4 +1,4 @@
-import type Playlist from '~/interfaces/playlist.interface';
+import type { Playlist } from '~/interfaces/playlist.interface';
 
 export const usePlaylistsStore = defineStore('playlists', () => {
   const playlists = ref<Playlist[]>([
