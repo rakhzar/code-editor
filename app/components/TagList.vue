@@ -1,21 +1,13 @@
 <script setup lang="ts">
-const tags = [
-  'Productivity',
-  'Development',
-  'Design',
-  'Utility',
-  'Integration',
-  'Testing',
-  'Debugging',
-  'Formatting',
-  'Collaboration',
-  'Documentation',
-]
+const { tags } = useTagsStore();
 </script>
 
 <template>
   <ul class="flex flex-col gap-y-1">
-    <TagListItem v-for="tag in tags" :key="tag">
+    <TagListItem
+      v-for="tag in tags"
+      :key="tag.id"
+    >
       {{ tag }}
     </TagListItem>
   </ul>
