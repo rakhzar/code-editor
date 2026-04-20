@@ -53,8 +53,7 @@ export const usePlaylistsStore = defineStore('playlists', () => {
     {
       id: 7,
       title: 'Python Development',
-      description:
-        'Configure VS Code for professional Python development.',
+      description: 'Configure VS Code for professional Python development.',
       tagIds: [10, 3, 1],
       lessonIds: [57],
     },
@@ -77,14 +76,20 @@ export const usePlaylistsStore = defineStore('playlists', () => {
     {
       id: 10,
       title: 'Testing Tools',
-      description:
-        'Set up and use testing frameworks and tools in VS Code.',
+      description: 'Set up and use testing frameworks and tools in VS Code.',
       tagIds: [8, 3, 1],
       lessonIds: [60],
     },
   ]);
 
+  function getPlaylistBySlug(slug: string) {
+    return playlists.value.find(
+      (playlist) => playlist?.title.toLowerCase().replaceAll(' ', '-') === slug,
+    );
+  }
+
   return {
     playlists,
+    getPlaylistBySlug,
   };
 });
