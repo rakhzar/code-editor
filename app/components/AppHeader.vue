@@ -7,7 +7,9 @@
     >
       <AppLogo
         icon-classes="size-8 text-indigo-600 sm:size-12 dark:text-white"
-      ></AppLogo>
+      >
+        Code Editor
+      </AppLogo>
       <AppHeaderNav />
       <AppHeaderMobileNav />
     </div>

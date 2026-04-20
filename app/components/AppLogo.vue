@@ -14,8 +14,10 @@ defineProps<{
       :class="`-rotate-6 ${iconClasses}`"
     />
     <span
+      v-if="$slots.default"
       class="text-xl font-black sm:text-2xl dark:text-white"
-      >Code Editor</span
     >
+      <slot />
+    </span>
   </NuxtLink>
 </template>
