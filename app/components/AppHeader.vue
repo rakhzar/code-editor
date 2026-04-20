@@ -6,6 +6,7 @@
       class="container flex items-center justify-between gap-x-10"
     >
       <AppLogo
+        class="text-xl sm:text-2xl dark:text-white"
         icon-classes="size-8 text-indigo-600 sm:size-12 dark:text-white"
       >
         Code Editor

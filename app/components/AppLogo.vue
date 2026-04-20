@@ -7,16 +7,13 @@ defineProps<{
 <template>
   <NuxtLink
     to="/"
-    class="flex items-center gap-x-1 sm:gap-x-2"
+    class="flex items-center gap-x-1 font-black sm:gap-x-2"
   >
     <Icon
       name="code"
       :class="`-rotate-6 ${iconClasses}`"
     />
-    <span
-      v-if="$slots.default"
-      class="text-xl font-black sm:text-2xl dark:text-white"
-    >
+    <span v-if="$slots.default">
       <slot />
     </span>
   </NuxtLink>
