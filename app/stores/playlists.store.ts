@@ -7,56 +7,56 @@ export const usePlaylistsStore = defineStore('playlists', () => {
       title: 'Prettier',
       description:
         'Automatically format your code to ensure consistent style across your project.',
-      tags: ['Utility', 'Formatting'],
+      tagIds: [14, 1, 3],
     },
     {
       id: 2,
       title: 'GitLens',
       description:
         'Supercharge Git within VS Code with commit visualization and blame annotations.',
-      tags: ['Development', 'Collaboration'],
+      tagIds: [15, 13, 3],
     },
     {
       id: 3,
       title: 'Live Share',
       description:
         'Real-time collaborative development from the comfort of your favorite editor.',
-      tags: ['Development', 'Collaboration'],
+      tagIds: [16, 3, 1],
     },
     {
       id: 4,
       title: 'ESLint',
       description:
         'Find and fix problems in your JavaScript/TypeScript code automatically.',
-      tags: ['Development', 'Debugging'],
+      tagIds: [5, 6, 4],
     },
     {
       id: 5,
       title: 'Code Runner',
       description:
         'Run code snippets in multiple programming languages with a single click.',
-      tags: ['Development', 'Utility'],
+      tagIds: [7, 3, 1],
     },
     {
       id: 6,
       title: 'REST Client',
       description:
         'Send HTTP requests and view responses directly in Visual Studio Code.',
-      tags: ['Development', 'Utility'],
+      tagIds: [9, 3, 1],
     },
     {
       id: 7,
       title: 'Code Spell Checker',
       description:
         'Catch common spelling errors in your source code and documentation.',
-      tags: ['Utility', 'Documentation'],
+      tagIds: [10, 3, 1],
     },
     {
       id: 8,
       title: 'Docker',
       description:
         'Manage Docker containers and images directly from VS Code.',
-      tags: ['Development', 'Integration'],
+      tagIds: [11, 9, 3],
     },
   ]);
 
