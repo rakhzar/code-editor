@@ -3,4 +3,5 @@ export interface Playlist {
   title: string;
   description: string;
   tagIds: number[];
+  lessonIds: number[];
 }
