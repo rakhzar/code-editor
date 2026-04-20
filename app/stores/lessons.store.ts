@@ -1,6 +1,6 @@
 import type { Lesson } from '~/interfaces/lesson.interface';
 
-export const uselessonsStore = defineStore('lessons', () => {
+export const useLessonsStore = defineStore('lessons', () => {
   const lessons = ref<Lesson[]>([
     {
       id: 1,
@@ -410,5 +410,9 @@ export const uselessonsStore = defineStore('lessons', () => {
     },
   ]);
 
-  return { lessons };
+  function getLessonsById(id: number) {
+    return lessons.value.find((lesson) => lesson.id === id);
+  }
+
+  return { lessons, getLessonsById };
 });
