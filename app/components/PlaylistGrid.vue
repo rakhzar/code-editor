@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { playlists } = usePlaylistsStore();
+const playlistsStore = usePlaylistsStore();
 </script>
 
 <template>
@@ -7,7 +7,7 @@ const { playlists } = usePlaylistsStore();
     class="col-span-1 grid gap-2 sm:gap-4 md:col-span-2 lg:grid-cols-2 xl:col-span-3 xl:grid-cols-3"
   >
     <PlaylistGridItem
-      v-for="playlist in playlists"
+      v-for="playlist in playlistsStore.filteredPlaylists"
       :key="playlist.title"
       :playlist="playlist"
     />
