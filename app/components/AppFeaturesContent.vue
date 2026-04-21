@@ -5,17 +5,10 @@ const { getLessonsById } = useLessonsStore();
 const features = ['cog', 'fire', 'puzzle'].map((icon, i) => {
   const lesson = getLessonsById(playlists[i]?.lessonIds[0] ?? 0);
 
-  if (!lesson) {
-    throw createError({
-      statusCode: 404,
-      statusMessage: 'Lesson not found',
-    });
-  }
-
   return {
     title: playlists[i]?.title || '',
     description: playlists[i]?.description || '',
-    link: `/playlists/${slugify(playlists[i]?.title || '')}/lessons/${slugify(lesson.title)}`,
+    link: getPlaylistLink(playlists[i], lesson),
     icon,
   };
 });
