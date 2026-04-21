@@ -1,6 +1,15 @@
+<script setup lang="ts">
+const model = defineModel<string>();
+</script>
+
 <template>
   <div class="flex flex-col gap-y-4 md:col-span-1 lg:gap-y-6">
-    <AppFormField type="search" placeholder="Playlist Title" id="search" />
+    <AppFormField
+      v-model="model"
+      type="search"
+      placeholder="Playlist Title"
+      id="search"
+    />
     <div class="flex flex-col gap-y-2">
       <h3 class="font-semibold sm:text-lg dark:text-white">Tags</h3>
       <TagList />
