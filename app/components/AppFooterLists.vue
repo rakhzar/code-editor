@@ -8,16 +8,9 @@ const lists = [
     items: playlists.slice(4, 7).map((playlist) => {
       const lesson = getLessonsById(playlist.lessonIds[0] ?? 0);
 
-      if (!lesson) {
-        throw createError({
-          statusCode: 404,
-          statusMessage: 'Lesson not found',
-        });
-      }
-
       return {
         label: playlist.title,
-        link: `/playlists/${slugify(playlist.title || '')}/lessons/${slugify(lesson.title)}`,
+        link: getPlaylistLink(playlist, lesson),
       };
     }),
   },
@@ -26,16 +19,9 @@ const lists = [
     items: playlists.slice(0, 3).map((playlist) => {
       const lesson = getLessonsById(playlist.lessonIds[0] ?? 0);
 
-      if (!lesson) {
-        throw createError({
-          statusCode: 404,
-          statusMessage: 'Lesson not found',
-        });
-      }
-
       return {
         label: playlist.title,
-        link: `/playlists/${slugify(playlist.title || '')}/lessons/${slugify(lesson.title)}`,
+        link: getPlaylistLink(playlist, lesson),
       };
     }),
   },
