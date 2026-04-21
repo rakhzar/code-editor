@@ -14,8 +14,15 @@ const lesson = useLessonsStore().getLessonsById(
   props.playlist.lessonIds[0] ?? 0,
 );
 
+if (!lesson) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Lesson not found',
+  });
+}
+
 const playlistSlug = props.playlist.title.toLowerCase().replaceAll(' ', '-');
-const lessonSlug = lesson?.title.toLowerCase().replaceAll(' ', '-');
+const lessonSlug = lesson.title.toLowerCase().replaceAll(' ', '-');
 </script>
 
 <template>
