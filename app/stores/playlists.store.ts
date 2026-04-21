@@ -81,6 +81,7 @@ export const usePlaylistsStore = defineStore('playlists', () => {
       lessonIds: [60],
     },
   ]);
+  const searchQuery = ref('');
 
   function getPlaylistBySlug(slug: string) {
     return playlists.value.find(
@@ -90,6 +91,7 @@ export const usePlaylistsStore = defineStore('playlists', () => {
 
   return {
     playlists,
+    searchQuery,
     getPlaylistBySlug,
   };
 });

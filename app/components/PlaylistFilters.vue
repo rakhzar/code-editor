@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const model = defineModel<string>();
+const playlistsStore = usePlaylistsStore();
 </script>
 
 <template>
   <div class="flex flex-col gap-y-4 md:col-span-1 lg:gap-y-6">
     <AppFormField
-      v-model="model"
+      v-model="playlistsStore.searchQuery"
       type="search"
       placeholder="Playlist Title"
       id="search"
