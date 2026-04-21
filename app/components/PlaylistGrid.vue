@@ -11,5 +11,11 @@ const playlistsStore = usePlaylistsStore();
       :key="playlist.title"
       :playlist="playlist"
     />
+    <p
+      v-if="playlistsStore.filteredPlaylists.length === 0"
+      class="col-span-full text-center text-gray-400"
+    >
+      No playlists found
+    </p>
   </div>
 </template>
