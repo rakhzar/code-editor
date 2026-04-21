@@ -12,8 +12,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 2,
       title: 'Font Family',
-      description:
-        'Choose and configure the perfect programming font.',
+      description: 'Choose and configure the perfect programming font.',
       duration: 423,
     },
     {
@@ -25,8 +24,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 4,
       title: 'Custom UI Style',
-      description:
-        'Style VS Code interface using Custom UI Style extension.',
+      description: 'Style VS Code interface using Custom UI Style extension.',
       duration: 512,
     },
     {
@@ -74,8 +72,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 12,
       title: 'Essential Shortcuts',
-      description:
-        'Learn the most important keyboard shortcuts for daily use.',
+      description: 'Learn the most important keyboard shortcuts for daily use.',
       duration: 538,
     },
     {
@@ -93,8 +90,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 15,
       title: 'Refactoring Shortcuts',
-      description:
-        'Learn shortcuts for common refactoring operations.',
+      description: 'Learn shortcuts for common refactoring operations.',
       duration: 495,
     },
     {
@@ -106,8 +102,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 17,
       title: 'Extension Basics',
-      description:
-        'Understanding VS Code extensions and marketplace.',
+      description: 'Understanding VS Code extensions and marketplace.',
       duration: 418,
     },
     {
@@ -119,8 +114,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 19,
       title: 'Language Extensions',
-      description:
-        'Best extensions for different programming languages.',
+      description: 'Best extensions for different programming languages.',
       duration: 472,
     },
     {
@@ -138,8 +132,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 22,
       title: 'Git Extensions',
-      description:
-        'Enhance your Git workflow with powerful extensions.',
+      description: 'Enhance your Git workflow with powerful extensions.',
       duration: 385,
     },
     {
@@ -273,22 +266,19 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 44,
       title: 'Vim Keybindings',
-      description:
-        'Master Vim keybindings in VS Code for advanced editing.',
+      description: 'Master Vim keybindings in VS Code for advanced editing.',
       duration: 545,
     },
     {
       id: 45,
       title: 'Extension Basics',
-      description:
-        'Learn how to find, install, and manage VS Code extensions.',
+      description: 'Learn how to find, install, and manage VS Code extensions.',
       duration: 302,
     },
     {
       id: 46,
       title: 'Must-Have Extensions',
-      description:
-        'Discover the most popular and useful VS Code extensions.',
+      description: 'Discover the most popular and useful VS Code extensions.',
       duration: 463,
     },
     {
@@ -307,16 +297,14 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 62,
       title: 'Prettier Configuration',
-      description:
-        'Customize Prettier rules to match your coding style.',
+      description: 'Customize Prettier rules to match your coding style.',
 
       duration: 518,
     },
     {
       id: 63,
       title: 'Prettier Plugins',
-      description:
-        'Extend Prettier with plugins for additional file types.',
+      description: 'Extend Prettier with plugins for additional file types.',
 
       duration: 437,
     },
@@ -335,15 +323,13 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 50,
       title: 'Advanced GitLens Features',
-      description:
-        'Explore advanced GitLens features for Git mastery.',
+      description: 'Explore advanced GitLens features for Git mastery.',
       duration: 476,
     },
     {
       id: 51,
       title: 'Setting Up Live Share',
-      description:
-        'Install and configure Live Share for collaborative coding.',
+      description: 'Install and configure Live Share for collaborative coding.',
       duration: 349,
     },
     {
@@ -356,8 +342,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 53,
       title: 'Advanced Collaboration',
-      description:
-        'Master advanced Live Share features for team productivity.',
+      description: 'Master advanced Live Share features for team productivity.',
       duration: 394,
     },
     {
@@ -370,8 +355,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 55,
       title: 'Introduction to Debugging',
-      description:
-        'Understand the fundamentals of debugging in VS Code.',
+      description: 'Understand the fundamentals of debugging in VS Code.',
       duration: 319,
     },
     {
@@ -383,8 +367,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 57,
       title: 'Setting Up Your Python Environment',
-      description:
-        'Configure VS Code for professional Python development.',
+      description: 'Configure VS Code for professional Python development.',
       duration: 408,
     },
     {
@@ -397,8 +380,7 @@ export const useLessonsStore = defineStore('lessons', () => {
     {
       id: 59,
       title: 'Introduction to Remote Development',
-      description:
-        'Learn how to use VS Code for remote development workflows.',
+      description: 'Learn how to use VS Code for remote development workflows.',
       duration: 252,
     },
     {
