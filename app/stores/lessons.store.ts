@@ -400,5 +400,11 @@ export const useLessonsStore = defineStore('lessons', () => {
     return lessons.value.filter((lesson) => ids.includes(lesson.id));
   }
 
-  return { lessons, getLessonsById, getLessonsByIds };
+  function getLessonBySlug(slug: string) {
+    return lessons.value.find(
+      (lessons) => lessons?.title.toLowerCase().replaceAll(' ', '-') === slug,
+    );
+  }
+
+  return { lessons, getLessonsById, getLessonsByIds, getLessonBySlug };
 });
