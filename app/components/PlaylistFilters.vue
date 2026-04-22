@@ -13,9 +13,19 @@ tagsStore.selectedTagIds = route.query.tags
   : [];
 
 watch(
-  () => playlistsStore.searchQuery,
-  (searchQuery) => {
-    router.replace({ query: searchQuery ? { search: searchQuery } : {} });
+  () => [playlistsStore.searchQuery, tagsStore.selectedTagIds] as const,
+  ([searchQuery, selectedTagIds]) => {
+    const query: Record<string, string> = {};
+
+    if (searchQuery) {
+      query.search = searchQuery;
+    }
+
+    if (selectedTagIds.length > 0) {
+      query.tags = selectedTagIds.join(',');
+    }
+
+    router.replace({ query });
   },
   { immediate: true },
 );
