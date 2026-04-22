@@ -20,12 +20,22 @@ export const useTagsStore = defineStore('tags', () => {
     { id: 16, name: 'Extensions' },
   ]);
 
+  const selectedTagIds = ref<number[]>([]);
+
   function getTagsById(ids: number[]) {
     return tags.value.filter((tag) => ids.includes(tag.id));
   }
 
+  function toggleTag(tagIds: number) {
+    selectedTagIds.value = selectedTagIds.value.includes(tagIds)
+      ? selectedTagIds.value.filter((id) => id !== tagIds)
+      : [...selectedTagIds.value, tagIds];
+  }
+
   return {
     tags,
+    selectedTagIds,
     getTagsById,
+    toggleTag,
   };
 });
