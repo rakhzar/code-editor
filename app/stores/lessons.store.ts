@@ -396,5 +396,9 @@ export const useLessonsStore = defineStore('lessons', () => {
     return lessons.value.find((lesson) => lesson.id === id);
   }
 
-  return { lessons, getLessonsById };
+  function getLessonsByIds(ids: number[]) {
+    return lessons.value.filter((lesson) => ids.includes(lesson.id));
+  }
+
+  return { lessons, getLessonsById, getLessonsByIds };
 });
