@@ -1,12 +1,19 @@
 <script setup lang="ts">
 const playlistsStore = usePlaylistsStore();
+const tagsStore = useTagsStore();
 
 const filteredPlaylists = computed(() => {
-  return playlistsStore.playlists.filter((playlist) => {
-    return playlist.title
-      .toLocaleLowerCase()
-      .includes(playlistsStore.searchQuery.toLocaleLowerCase());
-  });
+  return playlistsStore.playlists
+    .filter((playlist) => {
+      return playlist.title
+        .toLocaleLowerCase()
+        .includes(playlistsStore.searchQuery.toLocaleLowerCase());
+    })
+    .filter((playlist) => {
+      return tagsStore.selectedTagIds.every((tagId) => {
+        return playlist.tagIds.includes(tagId);
+      });
+    });
 });
 </script>
 
