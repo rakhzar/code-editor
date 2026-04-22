@@ -2,6 +2,13 @@
 const playlist = usePlaylistsStore().getPlaylistBySlug(
   useRoute().params.playlistSlug as string,
 );
+
+if (!playlist) {
+  throw createError({
+    statusCode: 404,
+    message: 'Playlist not found',
+  });
+}
 </script>
 
 <template>
@@ -12,7 +19,7 @@ const playlist = usePlaylistsStore().getPlaylistBySlug(
       :subheading="playlist?.description || 'No description available'"
     />
     <div class="container grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:gap-x-8">
-      <PlaylistLessons />
+      <PlaylistLessons :lesson-ids="playlist.lessonIds" />
       <NuxtPage />
     </div>
   </section>
