@@ -401,9 +401,7 @@ export const useLessonsStore = defineStore('lessons', () => {
   }
 
   function getLessonBySlug(slug: string) {
-    return lessons.value.find(
-      (lessons) => lessons?.title.toLowerCase().replaceAll(' ', '-') === slug,
-    );
+    return lessons.value.find((lessons) => slugify(lessons?.title) === slug);
   }
 
   return { lessons, getLessonsById, getLessonsByIds, getLessonBySlug };
