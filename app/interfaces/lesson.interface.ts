@@ -4,3 +4,7 @@ export interface Lesson {
   description: string;
   duration: number;
 }
+
+export interface NumberedLesson extends Lesson {
+  number: number;
+}
