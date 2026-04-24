@@ -5,6 +5,12 @@ const email = ref('');
 const password = ref('');
 const passwordConfirmation = ref('');
 
+const { loggedIn, fetch: fetchUserSession } = useUserSession();
+
+if (loggedIn.value) {
+  navigateTo('/playlists');
+}
+
 async function handleRegister() {
   await $fetch('/api/register', {
     method: 'POST',
@@ -13,6 +19,8 @@ async function handleRegister() {
       password: password.value,
     },
   });
+
+  await fetchUserSession();
 
   await navigateTo('/playlists');
 }
