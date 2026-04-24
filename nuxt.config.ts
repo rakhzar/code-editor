@@ -50,7 +50,4 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
     '@nuxthub/core',
   ],
-  hub: {
-    database: true,
-  }
 });
