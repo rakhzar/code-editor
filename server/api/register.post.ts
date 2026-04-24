@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  return db
+  const newUser = await db
     .insert(users)
     .values({
       email,
@@ -33,4 +33,14 @@ export default defineEventHandler(async (event) => {
       email: users.email,
     })
     .get();
+
+  await setUserSession(event, {
+    user: {
+      id: newUser.id,
+      email: newUser.email,
+    },
+    loggedInAt: Date.now(),
+  });
+
+  return newUser;
 });
