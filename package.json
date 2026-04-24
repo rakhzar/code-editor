@@ -25,6 +25,8 @@
     "@nuxthub/core": "^0.10.7",
     "@pinia/nuxt": "^0.11.3",
     "@tailwindcss/typography": "^0.5.19",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.6.0",
     "drizzle-kit": "^0.31.10",
     "nuxt": "^4.4.2",
     "nuxt-auth-utils": "^0.5.29",
