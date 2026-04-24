@@ -48,5 +48,9 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@pinia/nuxt',
     'nuxt-auth-utils',
+    '@nuxthub/core',
   ],
+  hub: {
+    database: true,
+  }
 });
