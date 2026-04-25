@@ -5,7 +5,6 @@ const emailError = ref('');
 const passwordError = ref('');
 const passwordConfirmationError = ref('');
 
-const error = ref('');
 const email = ref('');
 const password = ref('');
 const passwordConfirmation = ref('');
@@ -55,12 +54,6 @@ async function handleRegister() {
     @submit.prevent="handleRegister"
     class="flex flex-col gap-y-4 sm:gap-y-6"
   >
-    <div
-      v-if="error"
-      class="rounded-lg bg-red-100 p-3 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400"
-    >
-      {{ error }}
-    </div>
     <AppFormField
       v-model.trim="email"
       type="email"
