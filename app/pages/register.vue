@@ -22,10 +22,15 @@ watch(passwordConfirmation, (value) => {
     validatePasswordConfirmation(password.value, value) ?? '';
 });
 
-const hasErrors = computed(() => {
-  return Boolean(
+const isFormValid = computed(() => {
+  const hasErrors = Boolean(
     emailError.value || passwordError.value || passwordConfirmationError.value,
   );
+
+  const allFieldsFilled =
+    email.value && password.value && passwordConfirmation.value;
+
+  return !hasErrors && allFieldsFilled;
 });
 
 const { loggedIn, fetch: fetchUserSession } = useUserSession();
@@ -77,7 +82,7 @@ async function handleRegister() {
     >
     <AppButton
       class="mt-2 sm:mt-1"
-      :disabled="hasErrors"
+      :disabled="!isFormValid"
       >Sign Up</AppButton
     >
   </form>
