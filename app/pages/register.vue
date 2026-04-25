@@ -1,10 +1,33 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'auth' });
 
+const emailError = ref('');
+const passwordError = ref('');
+const passwordConfirmationError = ref('');
+
 const error = ref('');
 const email = ref('');
 const password = ref('');
 const passwordConfirmation = ref('');
+
+watch(email, (value) => {
+  emailError.value = validateEmail(value) ?? '';
+});
+
+watch(password, (value) => {
+  passwordError.value = validatePassword(value) ?? '';
+});
+
+watch(passwordConfirmation, (value) => {
+  passwordConfirmationError.value =
+    validatePasswordConfirmation(password.value, value) ?? '';
+});
+
+const hasErrors = computed(() => {
+  return Boolean(
+    emailError.value || passwordError.value || passwordConfirmationError.value,
+  );
+});
 
 const { loggedIn, fetch: fetchUserSession } = useUserSession();
 
@@ -13,27 +36,6 @@ if (loggedIn.value) {
 }
 
 async function handleRegister() {
-  const emailError = validateEmail(email.value);
-  if (emailError) {
-    error.value = emailError;
-    return;
-  }
-
-  const passwordError = validatePassword(password.value);
-  if (passwordError) {
-    error.value = passwordError;
-    return;
-  }
-
-  const passwordConfirmationError = validatePasswordConfirmation(
-    password.value,
-    passwordConfirmation.value,
-  );
-  if (passwordConfirmationError) {
-    error.value = passwordConfirmationError;
-    return;
-  }
-
   await $fetch('/api/register', {
     method: 'POST',
     body: {
@@ -63,21 +65,28 @@ async function handleRegister() {
       v-model.trim="email"
       type="email"
       id="email"
+      :error="emailError"
       >Email</AppFormField
     >
     <AppFormField
       v-model="password"
       type="password"
       id="password"
+      :error="passwordError"
       >Password</AppFormField
     >
     <AppFormField
       v-model="passwordConfirmation"
       type="password"
       id="passwordConfirmation"
+      :error="passwordConfirmationError"
       >Password Confirmation</AppFormField
     >
-    <AppButton class="mt-2 sm:mt-1">Sign Up</AppButton>
+    <AppButton
+      class="mt-2 sm:mt-1"
+      :disabled="hasErrors"
+      >Sign Up</AppButton
+    >
   </form>
   <p class="mt-6 text-center text-sm text-gray-600 sm:mt-8 dark:text-gray-300">
     Already have an account?
