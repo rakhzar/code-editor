@@ -16,17 +16,14 @@
 
 ![Главная страница](./public/screenshots/homepage.png)
 ![Главная страница 2](./public/screenshots/section.png)
-_Лендинг с демонстрацией возможностей платформы_
 
 ---
 
 ### 🔐 Авторизация
 
 ![Страница входа](./public/screenshots/login.png)
-_Форма входа с валидацией_
 
 ![Регистрация](./public/screenshots/register.png)
-_Форма регистрации нового пользователя_
 
 ---
 
@@ -151,7 +148,7 @@ _Страница конкретного плейлиста со списком 
 ```bash
 # Клонируйте репозиторий
 git clone https://github.com/rakhzar/code-editor.git
-cd project-video
+cd code-editor
 
 # Установите зависимости
 npm install
