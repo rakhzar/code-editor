@@ -7,16 +7,24 @@ const error = ref('');
 
 const { loggedIn, fetch: fetchUserSession } = useUserSession();
 
+if (loggedIn.value) {
+  navigateTo('/playlists');
+}
+
 async function handleLogin() {
-  await $fetch('/api/login', {
-    method: 'POST',
-    body: {
-      email: email.value,
-      password: password.value,
-    },
-  });
-  await fetchUserSession();
-  await navigateTo('/playlists');
+  try {
+    await $fetch('/api/login', {
+      method: 'POST',
+      body: {
+        email: email.value,
+        password: password.value,
+      },
+    });
+    await fetchUserSession();
+    await navigateTo('/playlists');
+  } catch (e: any) {
+    error.value = e.date.message || 'Login failed. Please try again.';
+  }
 }
 </script>
 
@@ -25,6 +33,12 @@ async function handleLogin() {
     @click.prevent="handleLogin"
     class="flex flex-col gap-y-4 sm:gap-y-6"
   >
+    <div
+      v-if="error"
+      class="rounded-lg bg-red-100 p-3 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400"
+    >
+      {{ error }}
+    </div>
     <AppFormField
       v-model="email"
       type="email"
