@@ -1,16 +1,53 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'auth' });
+
+const email = ref('');
+const password = ref('');
+const error = ref('');
+
+const { loggedIn, fetch: fetchUserSession } = useUserSession();
+
+async function handleLogin() {
+  await $fetch('/api/login', {
+    method: 'POST',
+    body: {
+      email: email.value,
+      password: password.value,
+    },
+  });
+  await fetchUserSession();
+  await navigateTo('/playlists');
+}
 </script>
 
 <template>
-  <form class="flex flex-col gap-y-4 sm:gap-y-6">
-    <AppFormField type="email" id="email">Email</AppFormField>
-    <AppFormField label="Password" type="password" id="password">Password</AppFormField>
+  <form
+    @click.prevent="handleLogin"
+    class="flex flex-col gap-y-4 sm:gap-y-6"
+  >
+    <AppFormField
+      v-model="email"
+      type="email"
+      id="email"
+      required
+      >Email</AppFormField
+    >
+    <AppFormField
+      v-model="password"
+      label="Password"
+      type="password"
+      id="password"
+      required
+      >Password</AppFormField
+    >
     <AppButton class="mt-2 sm:mt-1">Log In</AppButton>
   </form>
   <p class="mt-6 text-center text-sm text-gray-600 sm:mt-8 dark:text-gray-300">
     Don't have an account?
-    <NuxtLink to="/register" class="font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+    <NuxtLink
+      to="/register"
+      class="font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+    >
       Sign Up
     </NuxtLink>
   </p>
