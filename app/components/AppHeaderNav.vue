@@ -6,7 +6,11 @@
       </li>
       <AuthState v-slot="{ loggedIn, clear }">
         <li v-if="loggedIn">
-          <AppHeaderNavLink to="#">Logout</AppHeaderNavLink>
+          <AppHeaderNavLink
+            @click="clear"
+            class="cursor-pointer"
+            >Logout</AppHeaderNavLink
+          >
         </li>
         <template v-else>
           <li>
